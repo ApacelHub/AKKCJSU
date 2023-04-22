@@ -1,0 +1,54 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "AKC Group | Shockwave Racing 🏁", HidePremium = false, SaveConfig = true, ConfigFolder = "AKC Group Workspace"})
+----------------\\\\\\\\\\\\\\\
+local Tab = Window:MakeTab({
+	Name = "Auto Farm 🤖",
+	PremiumOnly = false
+	})
+----------------
+	Tab:AddButton({
+	Name = "ON / Auto Farm",
+	Callback = function()
+	    _G.farm = true
+	    
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
+      		print("Successful ✔ (ON)")
+  	end    
+})
+----------------
+	Tab:AddButton({
+	Name = "OFF / Auto Farm",
+	Callback = function()
+	    _G.farm = false
+	    
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
+      		print("Successful ✔ (OFF)")
+  	end    
+})
+----------------\\\\\\\\\\\\\\\
+local Tab = Window:MakeTab({
+	Name = "Teleport 🏴",
+	PremiumOnly = false
+	})
+----------------\\\\\\\\\\\\\\\
+	Tab:AddButton({
+	Name = "Fastest Runner",
+	Callback = function()
+	    wait()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Finish.Finish.CFrame
+      		wait()
+      		print("Successful ✔ (Fastest Runner)")
+  	end    
+})
+----------------\\\\\\\\\\\\\\\
+	Tab:AddButton({
+	Name = "Boomerang",
+	Callback = function()
+	    wait()
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Finish.Finish.CFrame
+	    wait(0.8)
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Spawn.Spawn.CFrame
+	    wait()
+	    print("Successful ✔ (Boomerang)")
+	    end
+})
