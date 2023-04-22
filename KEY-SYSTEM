@@ -1,0 +1,13 @@
+local keychecked = false
+
+if _G.Key == "AKCGROUP" then
+    keychecked = true
+end
+
+if keychecked == true then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/HummmmWOW"))()
+    wait()
+    print("Key Valid")
+    else
+        game.Players.LocalPlayer:Kick("Enter Valid Key Please")
+end
