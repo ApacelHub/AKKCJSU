@@ -1,6 +1,6 @@
 	    while _G.farm do wait()
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Finish.Finish.CFrame
-	    wait(0.8)
+	    wait(1.2)
 	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Spawn.Spawn.CFrame
 	    wait()
 end
