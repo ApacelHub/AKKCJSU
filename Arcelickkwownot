@@ -35,7 +35,9 @@ local Tab = Window:MakeTab({
 	Name = "Fastest Runner",
 	Callback = function()
 	    wait()
-      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Finish.Finish.CFrame
+      		local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = game:GetService("Workspace").Finish.Finish.CFrame}):Play()
       		wait()
       		print("Successful ✔ (Fastest Runner)")
   	end    
@@ -45,9 +47,13 @@ local Tab = Window:MakeTab({
 	Name = "Boomerang",
 	Callback = function()
 	    wait()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Finish.Finish.CFrame
-	    wait(0.8)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Spawn.Spawn.CFrame
+	    local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = game:GetService("Workspace").Finish.Finish.CFrame}):Play()
+	    wait(6)
+	    local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = game:GetService("Workspace").Spawn.Spawn.CFrame}):Play()
 	    wait()
 	    print("Successful ✔ (Boomerang)")
 	    end
