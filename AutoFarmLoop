@@ -1,6 +1,10 @@
 	    while _G.farm do wait()
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Finish.Finish.CFrame
-	    wait(1.2)
-	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Spawn.Spawn.CFrame
-	    wait()
+	    local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = game:GetService("Workspace").Finish.Finish.CFrame}):Play()
+	    wait(2)
+	    local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = game:GetService("Workspace").Spawn.Spawn.CFrame}):Play()
+	    wait(2)
 end
