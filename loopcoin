@@ -1,6 +1,8 @@
-while _G.loop do wait()
-local Coin = game.Players.LocalPlayer.Character.HumanoidRootPart
-for i,v in pairs(game.workspace.Coins.Meshes:GetChildren()) do
-v.CFrame = Coin.CFrame
-wait(1.5)
+	    while _G.loop do wait()
+      for i,v in pairs(game.workspace.Coins.Meshes:GetChildren()) do
+	    local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = v.Name}):Play()
+	    wait(1.5)
+end
 end
