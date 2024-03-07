@@ -43,9 +43,3 @@ end
         end
     end
 end
-
-local nooblazer = {
-    game:GetService("Workspace").Map.SpinningLaser,
-    game:GetService("Workspace").Map.SlopeLazer,
-    game:GetService("Workspace").Map.TunnelLazer
-}
