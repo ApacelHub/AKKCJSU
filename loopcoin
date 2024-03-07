@@ -1,7 +1,19 @@
 local excludedPart = game:GetService("Workspace").Spawn.Part -- Example excluded part, modify as needed
+local nooblazer = {
+    game:GetService("Workspace").Map.SpinningLaser,
+    game:GetService("Workspace").Map.SlopeLazer,
+    game:GetService("Workspace").Map.TunnelLazer
+}
 
 while _G.loop do 
     wait()
+
+for _, part in ipairs(nooblazer) do
+    if part and part.Parent then
+        part:Destroy()
+    end
+end
+
     for i,v in pairs(game.workspace.Coins.Meshes:GetChildren()) do
         if v.Name == "Coin" then
             -- Check if the coin's position is within the excluded part
@@ -31,3 +43,17 @@ while _G.loop do
         end
     end
 end
+
+local nooblazer = {
+    game:GetService("Workspace").Map.SpinningLaser,
+    game:GetService("Workspace").Map.SlopeLazer,
+    game:GetService("Workspace").Map.TunnelLazer
+}
+
+
+for _, part in ipairs(nooblazer) do
+    if part and part.Parent then
+        part:Destroy()
+    end
+end
+
