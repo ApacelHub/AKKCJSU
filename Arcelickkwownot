@@ -49,12 +49,9 @@ OrionLib:MakeNotification({
 })
 	    _G.loop = true
 
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
-	wait(1)
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
       		print("Successful ✔ (ON)")
   	end    
-end
 })
 ----------------
 	Tab:AddButton({
