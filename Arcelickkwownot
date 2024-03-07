@@ -7,10 +7,10 @@ local Tab = Window:MakeTab({
 	})
 ----------------
 	Tab:AddButton({
-	Name = "ON / Auto Farm",
+	Name = "ON / Auto Farm (Wins 🏆)",
 	Callback = function()
 OrionLib:MakeNotification({
-	Name = "Auto Farm has started!",
+	Name = "Auto Farm has (Wins 🏆) started!",
 	Content = "",
 	Image = "rbxassetid://4483345998",
 	Time = 5
@@ -23,10 +23,10 @@ OrionLib:MakeNotification({
 })
 ----------------
 	Tab:AddButton({
-	Name = "OFF / Auto Farm",
+	Name = "OFF / Auto Farm (Wins 🏆)",
 	Callback = function()
 OrionLib:MakeNotification({
-	Name = "Auto Farm has stopped!",
+	Name = "Auto Farm (Wins 🏆) has stopped!",
 	Content = "",
 	Image = "rbxassetid://4483345998",
 	Time = 5
@@ -34,6 +34,38 @@ OrionLib:MakeNotification({
 	    _G.farm = false
 	    
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
+      		print("Successful ✔ (OFF)")
+  	end    
+})
+----------------
+	Tab:AddButton({
+	Name = "ON / Auto Farm (Coins 🪙)",
+	Callback = function()
+OrionLib:MakeNotification({
+	Name = "Auto Farm (Coins 🪙) has started!",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+	    _G.loop = true
+	    
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
+      		print("Successful ✔ (ON)")
+  	end    
+})
+----------------
+	Tab:AddButton({
+	Name = "OFF / Auto Farm (Coins 🪙)",
+	Callback = function()
+OrionLib:MakeNotification({
+	Name = "Auto Farm (Coins 🪙) has stopped!",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+	    _G.loop = false
+	    
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
       		print("Successful ✔ (OFF)")
   	end    
 })
