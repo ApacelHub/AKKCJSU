@@ -48,7 +48,9 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 	    _G.loop = true
-	    
+
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
+	wait(1)
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
       		print("Successful ✔ (ON)")
   	end    
