@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "AKC Group | Shockwave Racing 🏁", HidePremium = false, SaveConfig = true, ConfigFolder = "AKC Group Workspace"})
+local Window = OrionLib:MakeWindow({Name = "Hyper Group | Shockwave Racing 🏁", HidePremium = false, SaveConfig = true, ConfigFolder = "AKC Group Workspace"})
 ----------------\\\\\\\\\\\\\\\
 local Tab = Window:MakeTab({
 	Name = "Auto Farm 🤖",
