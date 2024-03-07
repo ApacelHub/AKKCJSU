@@ -1,10 +1,16 @@
-while _G.loop do wait()
-for i,v in pairs(game.workspace.Coins.Meshes:GetChildren()) do
-if v.Name == "Coin" then
-	    local TweenService = game:GetService("TweenService")
-local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-{CFrame = v.CFrame}):Play()
-	    wait(1)
-end
-end
+local excludedPart = game:GetService("Workspace").Spawn.Part -- Example excluded part, modify as needed
+
+while _G.loop do 
+    wait()
+    for i,v in pairs(game.workspace.Coins.Meshes:GetChildren()) do
+        if v.Name == "Coin" then
+            -- Check if the coin's position is not within the excluded part
+            if not v:IsDescendantOf(excludedPart) then
+                local TweenService = game:GetService("TweenService")
+                local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = v.CFrame}):Play()
+                wait(1)
+            end
+        end
+    end
 end
