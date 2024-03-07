@@ -2,7 +2,7 @@
       for i,v in pairs(game.workspace.Coins.Meshes:GetChildren()) do
 	    local TweenService = game:GetService("TweenService")
 local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-{CFrame = v.Name}):Play()
+{CFrame = v.Name.CFrame}):Play()
 	    wait(1.5)
 end
 end
