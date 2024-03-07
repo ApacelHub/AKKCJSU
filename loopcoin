@@ -1,8 +1,6 @@
 while _G.loop do wait()
 for i,v in pairs(game:GetService("Workspace").Coins.Meshes:GetDescendants()) do
-local TweenService = game:GetService("TweenService")
-local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-{game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame}):Play()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
 wait(1.5)
 end
 end
