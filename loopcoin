@@ -1,6 +1,6 @@
 while _G.loop do wait()
-for in pairs(game:GetService("Workspace").Coins.Meshes:GetChildren()) do
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+local Coin = game.Players.LocalPlayer.Character.HumanoidRootPart
+for i,v in pairs(game.workspace.Coins.Meshes:GetChildren()) do
+v.CFrame = Coin.CFrame
 wait(1.5)
-end
 end
