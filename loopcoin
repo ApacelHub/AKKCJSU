@@ -49,11 +49,3 @@ local nooblazer = {
     game:GetService("Workspace").Map.SlopeLazer,
     game:GetService("Workspace").Map.TunnelLazer
 }
-
-
-for _, part in ipairs(nooblazer) do
-    if part and part.Parent then
-        part:Destroy()
-    end
-end
-
