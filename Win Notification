@@ -1,1 +1,8 @@
 game:GetService("Players").ezwinningbroshockw1.leaderstats.Wins
+
+OrionLib:MakeNotification({
+	Name = "You have got 1 win now you are have game:GetService("Players").ezwinningbroshockw1.leaderstats.Wins of win!",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
