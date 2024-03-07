@@ -9,6 +9,12 @@ local Tab = Window:MakeTab({
 	Tab:AddButton({
 	Name = "ON / Auto Farm",
 	Callback = function()
+OrionLib:MakeNotification({
+	Name = "Auto Farm has started!",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
 	    _G.farm = true
 	    
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
@@ -19,6 +25,12 @@ local Tab = Window:MakeTab({
 	Tab:AddButton({
 	Name = "OFF / Auto Farm",
 	Callback = function()
+OrionLib:MakeNotification({
+	Name = "Auto Farm has stopped!",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
 	    _G.farm = false
 	    
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
