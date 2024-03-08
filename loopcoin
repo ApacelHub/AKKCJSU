@@ -1,8 +1,33 @@
+local excludedPart = game:GetService("Workspace").Spawn.Part
+
 while _G.loop do 
     wait()
-    for i,v in pairs(game:GetService("Workspace").Coins.Points:GetChildren()) do
+
+    for i,v in pairs(game.workspace.Coins.Meshes:GetChildren()) do
         if v.Name == "Coin" then
-                -- Apply tween effect if the coin is not within the excluded part
+            -- Get the position of the coin
+            local coinPosition = v.Position
+            -- Get the position and size of the excluded part
+            local partPosition = excludedPart.Position
+            local partSize = excludedPart.Size
+            -- Calculate the bounds of the excluded part
+            local partBounds = partSize / 2
+            -- Calculate the minimum and maximum coordinates of the excluded part
+            local minX = partPosition.X - partBounds.X
+            local maxX = partPosition.X + partBounds.X
+            local minY = partPosition.Y - partBounds.Y
+            local maxY = partPosition.Y + partBounds.Y
+            local minZ = partPosition.Z - partBounds.Z
+            local maxZ = partPosition.Z + partBounds.Z
+
+            -- Check if the coin is within the excluded part
+            if coinPosition.X >= minX and coinPosition.X <= maxX and
+               coinPosition.Y >= minY and coinPosition.Y <= maxY and
+               coinPosition.Z >= minZ and coinPosition.Z <= maxZ then
+                -- Delete the coin if it's within the excluded part
+                v:Destroy()
+            else
+                -- Apply a tween effect if the coin is not within the excluded part
                 local TweenService = game:GetService("TweenService")
                 local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
                     {CFrame = v.CFrame}):Play()
@@ -10,3 +35,4 @@ while _G.loop do
             end
         end
     end
+end
