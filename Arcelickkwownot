@@ -47,17 +47,6 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
-_G.loopcheckcoin = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
-wait(40)
-
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-
-wait(2)
-
-_G.loopcheckcoin = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
-
 	    _G.loop = true
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
       		print("Successful ✔ (ON)")
@@ -73,10 +62,6 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
-
-_G.loopcheckcoin = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
-
 	    _G.loop = false
 	    
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
@@ -150,4 +135,30 @@ until Server
  
 TPS:TeleportToPlaceInstance(_place,Server.id,game:GetService('Players').LocalPlayer)
 	end
+----------------\\\\\\\\\\\\\\\
+local Tab = Window:MakeTab({
+	Name = "Check Map ✅",
+	PremiumOnly = false
+	})
+----------------
+Tab:AddButton({
+	Name = "Change Server",
+	Callback = function()
+OrionLib:MakeNotification({
+	Name = "Checking Please Wait...!",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 34
+})
+_G.loopcheckcoin = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
+wait(30)
+
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+
+wait(4)
+
+_G.loopcheckcoin = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
+
 })
