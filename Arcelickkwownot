@@ -46,6 +46,12 @@ OrionLib:MakeNotification({
 	Content = "",
 	Image = "rbxassetid://4483345998",
 	Time = 5
+wait(2)
+OrionLib:MakeNotification({
+	Name = "Checking Map Please Wait...!",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 43
 })
 	    _G.loopcheckcoin = true;
 	    while _G.loopcheckcoin do 
@@ -60,6 +66,13 @@ OrionLib:MakeNotification({
             end
         end
 wait(43)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+OrionLib:MakeNotification({
+	Name = "Kill Self Please Wait!",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+wait(1.5)
 	    _G.loopcheckcoin = false;
 	    while _G.loopcheckcoin do 
     wait()
