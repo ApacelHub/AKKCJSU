@@ -1,177 +1,178 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Hyper Group | Shockwave Racing 🏁", HidePremium = false, SaveConfig = true, ConfigFolder = "AKC Group Workspace"})
-----------------\\\\\\\\\\\\\\\
+
 local Tab = Window:MakeTab({
-	Name = "Auto Farm 🤖",
-	PremiumOnly = false
-	})
-----------------
-	Tab:AddButton({
-	Name = "ON / Auto Farm (Wins 🏆)",
-	Callback = function()
-OrionLib:MakeNotification({
-	Name = "Auto Farm has (Wins 🏆) started!",
-	Content = "",
-	Image = "rbxassetid://4483345998",
-	Time = 5
+    Name = "Auto Farm 🤖",
+    PremiumOnly = false
 })
-	    _G.farm = true
-	    
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
-      		print("Successful ✔ (ON)")
-  	end    
-})
-----------------
-	Tab:AddButton({
-	Name = "OFF / Auto Farm (Wins 🏆)",
-	Callback = function()
-OrionLib:MakeNotification({
-	Name = "Auto Farm (Wins 🏆) has stopped!",
-	Content = "",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-	    _G.farm = false
-	    
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
-      		print("Successful ✔ (OFF)")
-  	end    
-})
-----------------
-	Tab:AddButton({
-	Name = "ON / Auto Farm (Coins 💵)",
-	Callback = function()
-OrionLib:MakeNotification({
-	Name = "Auto Farm (Coins 💵) has started!",
-	Content = "",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-	    _G.loop = true
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
-      		print("Successful ✔ (ON)")
-end
-})
-----------------
-	Tab:AddButton({
-	Name = "OFF / Auto Farm (Coins 💵)",
-	Callback = function()
-OrionLib:MakeNotification({
-	Name = "Auto Farm (Coins 💵) has stopped!",
-	Content = "",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-	    _G.loop = false
-	    
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
-      		print("Successful ✔ (OFF)")
-  	end    
-})
-----------------\\\\\\\\\\\\\\\
-local Tab = Window:MakeTab({
-	Name = "Teleport 🏴",
-	PremiumOnly = false
-	})
-----------------\\\\\\\\\\\\\\\
-	Tab:AddButton({
-	Name = "Fastest Runner",
-	Callback = function()
-	    wait()
-      		local TweenService = game:GetService("TweenService")
-local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-{CFrame = game:GetService("Workspace").Finish.Finish.CFrame}):Play()
-      		wait()
-      		print("Successful ✔ (Fastest Runner)")
-  	end    
-})
-----------------\\\\\\\\\\\\\\\
-	Tab:AddButton({
-	Name = "Boomerang",
-	Callback = function()
-	    wait()
-	    local TweenService = game:GetService("TweenService")
-local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-{CFrame = game:GetService("Workspace").Finish.Finish.CFrame}):Play()
-	    wait(6)
-	    local TweenService = game:GetService("TweenService")
-local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-{CFrame = game:GetService("Workspace").Spawn.Spawn.CFrame}):Play()
-	    wait()
-	    print("Successful ✔ (Boomerang)")
-	    end
-})
-----------------\\\\\\\\\\\\\\\
-local Tab = Window:MakeTab({
-	Name = "Change Server 🎯",
-	PremiumOnly = false
-	})
-----------------
-	Tab:AddButton({
-	Name = "Change Server",
-	Callback = function()
-OrionLib:MakeNotification({
-	Name = "Changing please wait!",
-	Content = "",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-	    local Http = game:GetService("HttpService")
-local TPS = game:GetService("TeleportService")
-local Api = "https://games.roblox.com/v1/games/"
- 
-local _place = game.PlaceId
-local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
-function ListServers(cursor)
-   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
-   return Http:JSONDecode(Raw)
-end
- 
-local Server, Next; repeat
-   local Servers = ListServers(Next)
-   Server = Servers.data[1]
-   Next = Servers.nextPageCursor
-until Server
- 
-TPS:TeleportToPlaceInstance(_place,Server.id,game:GetService('Players').LocalPlayer)
-	end
-----------------\\\\\\\\\\\\\\\
-local Tab = Window:MakeTab({
-	Name = "Check Map ✅",
-	PremiumOnly = false
-	})
-----------------
+
 Tab:AddButton({
-	Name = "Check Map",
-	Callback = function()
-OrionLib:MakeNotification({
-	Name = "Checking Please Wait...!",
-	Content = "",
-	Image = "rbxassetid://4483345998",
-	Time = 5
+    Name = "ON / Auto Farm (Wins 🏆)",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Auto Farm has (Wins 🏆) started!",
+            Content = "",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        _G.farm = true
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
+        print("Successful ✔ (ON)")
+    end
 })
-_G.loopcheckcoin = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
-wait(30)
 
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-
-wait(4)
-
-_G.loopcheckcoin = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
-
-})
-------------------------------------
 Tab:AddButton({
-	Name = "Stop Checking Map",
-	Callback = function()
-OrionLib:MakeNotification({
-	Name = "Stopped!",
-	Content = "",
-	Image = "rbxassetid://4483345998",
-	Time = 5
+    Name = "OFF / Auto Farm (Wins 🏆)",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Auto Farm (Wins 🏆) has stopped!",
+            Content = "",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        _G.farm = false
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
+        print("Successful ✔ (OFF)")
+    end
 })
-_G.loopcheckcoin = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
+
+Tab:AddButton({
+    Name = "ON / Auto Farm (Coins 💵)",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Auto Farm (Coins 💵) has started!",
+            Content = "",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        _G.loop = true
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
+        print("Successful ✔ (ON)")
+    end
+})
+
+Tab:AddButton({
+    Name = "OFF / Auto Farm (Coins 💵)",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Auto Farm (Coins 💵) has stopped!",
+            Content = "",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        _G.loop = false
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
+        print("Successful ✔ (OFF)")
+    end
+})
+
+local Tab2 = Window:MakeTab({
+    Name = "Teleport 🏴",
+    PremiumOnly = false
+})
+
+Tab2:AddButton({
+    Name = "Fastest Runner",
+    Callback = function()
+        wait()
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+        {CFrame = game:GetService("Workspace").Finish.Finish.CFrame}):Play()
+        wait()
+        print("Successful ✔ (Fastest Runner)")
+    end
+})
+
+Tab2:AddButton({
+    Name = "Boomerang",
+    Callback = function()
+        wait()
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+        {CFrame = game:GetService("Workspace").Finish.Finish.CFrame}):Play()
+        wait(6)
+        local Tw2 = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+        {CFrame = game:GetService("Workspace").Spawn.Spawn.CFrame}):Play()
+        wait()
+        print("Successful ✔ (Boomerang)")
+    end
+})
+
+local Tab3 = Window:MakeTab({
+    Name = "Change Server 🎯",
+    PremiumOnly = false
+})
+
+Tab3:AddButton({
+    Name = "Change Server",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Changing please wait!",
+            Content = "",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        local Http = game:GetService("HttpService")
+        local TPS = game:GetService("TeleportService")
+        local Api = "https://games.roblox.com/v1/games/"
+        
+        local _place = game.PlaceId
+        local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+        function ListServers(cursor)
+            local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+            return Http:JSONDecode(Raw)
+        end
+        
+        local Server, Next; repeat
+            local Servers = ListServers(Next)
+            Server = Servers.data[1]
+            Next = Servers.nextPageCursor
+        until Server
+        
+        TPS:TeleportToPlaceInstance(_place,Server.id,game:GetService('Players').LocalPlayer)
+    end
+})
+
+local Tab4 = Window:MakeTab({
+    Name = "Check Map ✅",
+    PremiumOnly = false
+})
+
+Tab4:AddButton({
+    Name = "Check Map",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Checking Please Wait...!",
+            Content = "",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        
+        _G.loopcheckcoin = true
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
+        
+        wait(30)
+        
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0
+        
+        wait(4)
+        
+        _G.loopcheckcoin = false
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
+    end
+})
+
+Tab4:AddButton({
+    Name = "Stop Checking Map",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Stopped!",
+            Content = "",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        _G.loopcheckcoin = false
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
+        print("Successful ✔ (OFF)") -- Changed "ON" to "OFF" in the print statement
+    end
 })
