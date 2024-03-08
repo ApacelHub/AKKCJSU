@@ -142,13 +142,13 @@ local Tab = Window:MakeTab({
 	})
 ----------------
 Tab:AddButton({
-	Name = "Change Server",
+	Name = "Check Map",
 	Callback = function()
 OrionLib:MakeNotification({
 	Name = "Checking Please Wait...!",
 	Content = "",
 	Image = "rbxassetid://4483345998",
-	Time = 34
+	Time = 5
 })
 _G.loopcheckcoin = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
@@ -161,4 +161,17 @@ wait(4)
 _G.loopcheckcoin = false
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
 
+})
+------------------------------------
+Tab:AddButton({
+	Name = "Stop Checking Map",
+	Callback = function()
+OrionLib:MakeNotification({
+	Name = "Stopped!",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+_G.loopcheckcoin = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
 })
