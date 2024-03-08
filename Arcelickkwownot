@@ -69,7 +69,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/mai
 	    _G.loop = true
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
       		print("Successful ✔ (ON)")
-  	end    
 })
 ----------------
 	Tab:AddButton({
