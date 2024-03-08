@@ -39,26 +39,55 @@ OrionLib:MakeNotification({
 })
 ----------------
 	Tab:AddButton({
-	Name = "ON / Auto Farm (Coins 🪙)",
+	Name = "ON / Auto Farm (Coins 💵)",
 	Callback = function()
 OrionLib:MakeNotification({
-	Name = "Auto Farm (Coins 🪙) has started!",
+	Name = "Auto Farm (Coins 💵) has started!",
 	Content = "",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
+	    _G.loopcheckcoin = true
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
+OrionLib:MakeNotification({
+	Name = "Checking Map Please Wait...!",
+	Content = "",
+	Image = "rbxassetid://4483345998",
+	Time = 43
+wait(43)
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    _G.loopcheckcoin = false
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
+wait(1.5)
 	    _G.loop = true
-
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
       		print("Successful ✔ (ON)")
   	end    
 })
 ----------------
 	Tab:AddButton({
-	Name = "OFF / Auto Farm (Coins 🪙)",
+	Name = "OFF / Auto Farm (Coins 💵)",
 	Callback = function()
 OrionLib:MakeNotification({
-	Name = "Auto Farm (Coins 🪙) has stopped!",
+	Name = "Auto Farm (Coins 💵) has stopped!",
 	Content = "",
 	Image = "rbxassetid://4483345998",
 	Time = 5
