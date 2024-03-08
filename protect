@@ -1,9 +1,11 @@
-while _G.loop do
-    game:GetService("RunService").Stepped:wait() -- Use RunService's Stepped event for more efficient waiting
-    
-    for i,v in pairs(game.workspace.Coins.Meshes:GetChildren()) do
-        if v.CFrame == CFrame.new(Vector3.new(0, -23.7275181, 0), Vector3.new(0.722326994, 0, -0.691551626), Vector3.new(0, 1, 0), Vector3.new(0.691551626, 0, 0.722326994)) then
-            v:Destroy() -- Destroy the object if its CFrame matches
+while _G.loopcheckcoin do 
+    wait()
+
+    for i,v in pairs(game:GetService("Workspace").Map:GetChildren()) do
+                -- Apply a tween effect if the coin is not within the excluded part
+                local TweenService = game:GetService("TweenService")
+                local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), 
+                    {CFrame = v.Root.CFrame}):Play()
+                wait(1)
+            end
         end
-    end
-end
