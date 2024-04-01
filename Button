@@ -1,4 +1,5 @@
-local button = script.Parent
+local button = script.Parent.Parent -- Assuming the TextButton is inside a Frame
+local frame = button.Parent -- Assuming the Frame is a child of another Frame or ScreenGui
 
 -- Function to simulate pressing the right shift key
 local function pressRightShift()
