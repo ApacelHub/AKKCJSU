@@ -15,8 +15,8 @@ Tab:AddButton({
             Image = "rbxassetid://4483345998",
             Time = 5
         })
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
         _G.farm = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
         print("Successful ✔ (ON)")
     end
 })
@@ -44,8 +44,8 @@ Tab:AddButton({
             Image = "rbxassetid://4483345998",
             Time = 5
         })
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
         _G.loop = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
         print("Successful ✔ (ON)")
     end
 })
