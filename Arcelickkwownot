@@ -16,7 +16,7 @@ Tab:AddButton({
             Time = 5
         })
         _G.farm = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
         print("Successful ✔ (ON)")
     end
 })
@@ -45,7 +45,7 @@ Tab:AddButton({
             Time = 5
         })
         _G.loop = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
         print("Successful ✔ (ON)")
     end
 })
