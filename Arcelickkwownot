@@ -1,5 +1,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Apacel Hub | Shockwave Racing 🏁", HidePremium = false, SaveConfig = true, ConfigFolder = "ApacelWorkspace", IntroText = "Apacel Hub"})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
 local Tab = Window:MakeTab({
     Name = "Auto Farm 🤖",
     PremiumOnly = false
@@ -15,7 +17,6 @@ Tab:AddButton({
             Time = 5
         })
         _G.farm = true
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
         print("Successful ✔ (ON)")
     end
 })
@@ -30,7 +31,6 @@ Tab:AddButton({
             Time = 5
         })
         _G.farm = false
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
         print("Successful ✔ (OFF)")
     end
 })
@@ -45,7 +45,6 @@ Tab:AddButton({
             Time = 5
         })
         _G.loop = true
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
         print("Successful ✔ (ON)")
     end
 })
@@ -60,7 +59,6 @@ Tab:AddButton({
             Time = 5
         })
         _G.loop = false
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
         print("Successful ✔ (OFF)")
     end
 })
@@ -129,49 +127,5 @@ Tab3:AddButton({
         until Server
         
         TPS:TeleportToPlaceInstance(_place,Server.id,game:GetService('Players').LocalPlayer)
-    end
-})
-
-local Tab4 = Window:MakeTab({
-    Name = "Check Map ✅",
-    PremiumOnly = false
-})
-
-Tab4:AddButton({
-    Name = "Check Map",
-    Callback = function()
-        OrionLib:MakeNotification({
-            Name = "Checking Please Wait...!",
-            Content = "",
-            Image = "rbxassetid://4483345998",
-            Time = 35
-        })
-        
-        _G.loopcheckcoin = true
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
-        
-        wait(30)
-        
-        game.Players.LocalPlayer.Character.Humanoid.Health = 0
-        
-        wait(4)
-        
-        _G.loopcheckcoin = false
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
-    end
-})
-
-Tab4:AddButton({
-    Name = "Stop Checking Map",
-    Callback = function()
-        OrionLib:MakeNotification({
-            Name = "Stopped!",
-            Content = "",
-            Image = "rbxassetid://4483345998",
-            Time = 5
-        })
-        _G.loopcheckcoin = false
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/protect"))()
-        print("Successful ✔ (OFF)") -- Changed "ON" to "OFF" in the print statement
     end
 })
