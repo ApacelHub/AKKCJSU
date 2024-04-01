@@ -1,7 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Apacel Hub | Shockwave Racing 🏁", HidePremium = false, SaveConfig = true, ConfigFolder = "ApacelWorkspace", IntroText = "Apacel Hub"})
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
 
 local Tab = Window:MakeTab({
     Name = "Auto Farm 🤖",
@@ -17,6 +15,7 @@ Tab:AddButton({
             Image = "rbxassetid://4483345998",
             Time = 5
         })
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/AutoFarmLoop"))()
         _G.farm = true
         print("Successful ✔ (ON)")
     end
@@ -45,6 +44,7 @@ Tab:AddButton({
             Image = "rbxassetid://4483345998",
             Time = 5
         })
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
         _G.loop = true
         print("Successful ✔ (ON)")
     end
