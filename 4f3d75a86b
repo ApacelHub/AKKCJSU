@@ -45,7 +45,7 @@ Tab:AddButton({
             Time = 5
         })
         _G.loop = true
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/loopcoin"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/d3e5f7g9h1i2"))()
         print("Successful ✔ (ON)")
     end
 })
