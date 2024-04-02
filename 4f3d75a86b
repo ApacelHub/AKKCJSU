@@ -134,7 +134,6 @@ Tab3:AddButton({
 Tab:AddButton({
     Name = "Auto Nitify (Wins 🏆)",
     Callback = function()
-    if PlayerPosition and (PlayerPosition - FinishLocation.Position).magnitude < 10 then
         OrionLib:MakeNotification({
             Name = "You have achieved a win! You now have " .. Wins .. " win(s)!",
             Content = "",
