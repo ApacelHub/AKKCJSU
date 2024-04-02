@@ -130,14 +130,3 @@ Tab3:AddButton({
         TPS:TeleportToPlaceInstance(_place,Server.id,game:GetService('Players').LocalPlayer)
     end
 })
-
-Tab:AddButton({
-    Name = "Auto Nitify (Wins 🏆)",
-    Callback = function()
-        OrionLib:MakeNotification({
-            Name = "You have achieved a win! You now have " .. Wins .. " win(s)!",
-            Content = "",
-            Image = "rbxassetid://4483345998",
-            Time = 5
-        })
-})
