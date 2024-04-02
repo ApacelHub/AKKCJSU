@@ -1,16 +1,12 @@
-game.Players.LocalPlayer.leaderstats.Wins
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
 
-OrionLib:MakeNotification({
-	Name = "You have got 1 win now you are have game:GetService("Players").ezwinningbroshockw1.leaderstats.Wins of win!",
-	Content = "",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
+local Wins = player.leaderstats.Wins.Value
 
-if
+-- Assuming OrionLib:MakeNotification is a function that creates notifications
 OrionLib:MakeNotification({
-	Name = "You have got 1 win now you are have game:GetService("Players").ezwinningbroshockw1.leaderstats.Wins of win!",
-	Content = "",
-	Image = "rbxassetid://4483345998",
-	Time = 5
+    Name = "You have achieved a win! You now have " .. Wins .. " win(s)!",
+    Content = "",
+    Image = "rbxassetid://4483345998",
+    Time = 5
 })
