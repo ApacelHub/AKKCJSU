@@ -1,8 +1,7 @@
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 
-while _G.notifi and player do
-    wait() -- Adjust this value to control the frequency of checking
+while _G.notifi do wait()
     local Wins = player.leaderstats.Wins.Value
 
     local FinishLocation = game:GetService("Workspace").Finish.Finish
