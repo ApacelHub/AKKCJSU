@@ -3,16 +3,6 @@ local Window = OrionLib:MakeWindow({Name = "Apacel Hub | Shockwave Racing 🏁",
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-
-while player do
-    wait(1) -- Adjust this value to control the frequency of checking
-    local Wins = player.leaderstats.Wins.Value
-
-    -- Removed the if condition
-end
-
 local Tab = Window:MakeTab({
     Name = "Auto Farm 🤖",
     PremiumOnly = false
@@ -143,11 +133,6 @@ Tab3:AddButton({
     end
 })
 
-local Tab = Window:MakeTab({
-    Name = "Auto Notify 🔊",
-    PremiumOnly = false
-})
-
 Tab:AddButton({
     Name = "Auto Nitify (Wins 🏆)",
     Callback = function()
@@ -158,5 +143,14 @@ Tab:AddButton({
             Image = "rbxassetid://4483345998",
             Time = 5
         })
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+while player do
+    wait(1) -- Adjust this value to control the frequency of checking
+    local Wins = player.leaderstats.Wins.Value
+
+    -- Removed the if condition
+end
 end
 })
