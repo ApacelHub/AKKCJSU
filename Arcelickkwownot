@@ -1,6 +1,6 @@
 if game.PlaceId == 9961650006 then
     print("Checked | Place Valid ✔")
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/Arcelickkwownot"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/mainscript"))()
 else 
 game.Players.LocalPlayer:Kick("Game Not Support")
 end
