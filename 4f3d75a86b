@@ -141,14 +141,5 @@ Tab:AddButton({
             Image = "rbxassetid://4483345998",
             Time = 5
         })
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-
-while player do
-    wait(1) -- Adjust this value to control the frequency of checking
-    local Wins = player.leaderstats.Wins.Value
-
-    -- Removed the if condition
-end
 end
 })
