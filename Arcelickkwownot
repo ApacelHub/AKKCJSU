@@ -1,5 +1,5 @@
 if game.PlaceId == 9961650006 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/4f3d75a8-6b"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/4f3d75a86b"))()
 else 
 game.Players.LocalPlayer:Kick("Game Not Support")
 end
