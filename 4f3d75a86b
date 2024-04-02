@@ -1,7 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Apacel Hub | Shockwave Racing 🏁", HidePremium = false, SaveConfig = true, ConfigFolder = "ApacelWorkspace", IntroText = "Apacel Hub"})
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
 
 local Tab = Window:MakeTab({
     Name = "Auto Farm 🤖",
