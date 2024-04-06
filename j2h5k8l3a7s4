@@ -8,7 +8,9 @@ local humanoid = character:FindFirstChildOfClass("Humanoid")
 
 local function teleportToFinish()
    local finishPos = Finish.Position
-   local middleOffset = Vector3.new(0, Finish.Size.Y/2, 0)
+   local playerPos = humanoid.RootPart.Position
+   local middleOffset = Vector3.new(0, finishPos.Y - playerPos.Y, 0) -- Adjust Y component only
+
    local targetPos = finishPos + middleOffset
 
    local tweenInfo = TweenInfo.new(
@@ -33,4 +35,3 @@ local function teleportToFinish()
 end
 
 teleportToFinish()
-end
