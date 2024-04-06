@@ -35,3 +35,4 @@ local function teleportToFinish()
 end
 
 teleportToFinish()
+end
