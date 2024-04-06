@@ -1,0 +1,86 @@
+local password = "apacelhubisgood"
+
+-- Function to create the GUI
+local function createGUI()
+    local gui = Instance.new("ScreenGui")
+    gui.Parent = game:GetService("CoreGui")
+
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0, 400, 0, 200) -- Adjusted size to be larger
+    frame.Position = UDim2.new(0.5, -200, 0.5, -100) -- Center the frame
+    frame.BackgroundTransparency = 0.5 -- Make frame slightly transparent
+    frame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+    frame.BorderSizePixel = 0
+    frame.Parent = gui
+
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 10)
+    corner.Parent = frame
+
+    local keyLabel = Instance.new("TextLabel") -- Added label for "Apacel Hub Key System"
+    keyLabel.Size = UDim2.new(1, 0, 0, 30) -- Adjusted size
+    keyLabel.Position = UDim2.new(0.5, 0, 0.1, 0) -- Centered horizontally and slightly above the center vertically
+    keyLabel.AnchorPoint = Vector2.new(0.5, 0)
+    keyLabel.BackgroundTransparency = 1
+    keyLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    keyLabel.Font = Enum.Font.SourceSansSemibold
+    keyLabel.TextSize = 20
+    keyLabel.TextXAlignment = Enum.TextXAlignment.Center -- Align text to center
+    keyLabel.Text = "Apacel Hub Key System" -- Label text
+    keyLabel.Parent = frame
+
+    local underline = Instance.new("Frame")
+    underline.Size = UDim2.new(0.8, 0, 0, 2) -- Adjusted size
+    underline.Position = UDim2.new(0.5, 0, 1, -2) -- Centered horizontally and near the bottom
+    underline.AnchorPoint = Vector2.new(0.5, 1)
+    underline.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    underline.BorderSizePixel = 0
+    underline.Parent = keyLabel
+
+    local textBox = Instance.new("TextBox")
+    textBox.Size = UDim2.new(1, -40, 0, 40)
+    textBox.Position = UDim2.new(0, 20, 0.5, -20)
+    textBox.AnchorPoint = Vector2.new(0, 0.5)
+    textBox.BackgroundTransparency = 1 -- Make textbox transparent
+    textBox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    textBox.BorderColor3 = Color3.fromRGB(30, 30, 30)
+    textBox.BorderSizePixel = 0
+    textBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+    textBox.Font = Enum.Font.SourceSans
+    textBox.TextSize = 18
+    textBox.Text = "" -- Set empty text
+    textBox.PlaceholderText = "Enter Password"
+    textBox.TextWrapped = true
+    textBox.ClearTextOnFocus = true -- Clear text when focused
+    textBox.Parent = frame
+
+    local button = Instance.new("TextButton")
+    button.Size = UDim2.new(1, -40, 0, 40)
+    button.Position = UDim2.new(0, 20, 0.8, -20) -- Adjusted the vertical position
+    button.AnchorPoint = Vector2.new(0, 0.5)
+    button.BackgroundColor3 = Color3.fromRGB(0, 122, 204)
+    button.BorderSizePixel = 0
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.Font = Enum.Font.SourceSansSemibold
+    button.TextSize = 20
+    button.Text = "Submit"
+    button.Parent = frame
+
+    local corner2 = Instance.new("UICorner")
+    corner2.CornerRadius = UDim.new(0, 10)
+    corner2.Parent = button
+
+    button.MouseButton1Click:Connect(function()
+        local enteredPassword = textBox.Text
+        if enteredPassword == password then
+            print("Password correct!")
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ApacelHub/AKKCJSU/main/p9o8i7u6y5t4'))()
+            gui:Destroy() -- Destroy the GUI if the password is correct
+        else
+            print(")
+        end
+    end)
+end
+
+-- Call the function to create the GUI
+createGUI()
