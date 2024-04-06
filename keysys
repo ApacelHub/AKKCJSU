@@ -1,0 +1,51 @@
+local Password = "apacelhubalwaysontop2024"
+
+-- Function to create the password GUI
+local function createPasswordGUI(player)
+    local ScreenGui = Instance.new("ScreenGui")
+    ScreenGui.Parent = player.PlayerGui
+
+    local Frame = Instance.new("Frame")
+    Frame.Size = UDim2.new(0.5, 0, 0.5, 0)
+    Frame.Position = UDim2.new(0.25, 0, 0.25, 0)
+    Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+    Frame.Parent = ScreenGui
+
+    local PasswordLabel = Instance.new("TextLabel")
+    PasswordLabel.Size = UDim2.new(1, 0, 0.2, 0)
+    PasswordLabel.Position = UDim2.new(0, 0, 0.05, 0)
+    PasswordLabel.Text = "Enter the password:"
+    PasswordLabel.Parent = Frame
+
+    local PasswordTextBox = Instance.new("TextBox")
+    PasswordTextBox.Size = UDim2.new(0.6, 0, 0.2, 0)
+    PasswordTextBox.Position = UDim2.new(0.2, 0, 0.3, 0)
+    PasswordTextBox.Parent = Frame
+
+    local SubmitButton = Instance.new("TextButton")
+    SubmitButton.Size = UDim2.new(0.3, 0, 0.15, 0)
+    SubmitButton.Position = UDim2.new(0.35, 0, 0.6, 0)
+    SubmitButton.Text = "Submit"
+    SubmitButton.Parent = Frame
+
+    SubmitButton.MouseButton1Click:Connect(function()
+        local enteredPassword = PasswordTextBox.Text
+        if enteredPassword == Password then
+            -- Correct password, remove GUI and run the script
+            ScreenGui:Destroy()
+            runScript(player)
+        else
+            -- Incorrect password, display message
+            warn("Incorrect password!")
+        end
+    end)
+end
+
+-- Function to run the script
+local function runScript(player)
+    -- Replace the following line with your actual script execution code
+    print(player.Name .. "'s script is running...")
+end
+
+-- Example usage: Create password GUI for all players when they join
+game.Players.PlayerAdded:Connect(createPasswordGUI)
