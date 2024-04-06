@@ -14,11 +14,11 @@ local function teleportToFinish()
    local targetPos = finishPos + middleOffset
 
    local tweenInfo = TweenInfo.new(
-       2.5,
+       1,
        Enum.EasingStyle.Linear,
        Enum.EasingDirection.Out,
-       -1,
-       true,
+       0,
+       false,
        0
    )
 
