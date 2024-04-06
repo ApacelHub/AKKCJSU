@@ -2,6 +2,7 @@ while _G.veryrisk do
     wait()
     local TweenService = game:GetService("TweenService")
     local finishCFrame = game:GetService("Workspace").Finish.Finish.CFrame
+    local playerCFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 
     local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), {
         CFrame = finishCFrame
@@ -9,12 +10,15 @@ while _G.veryrisk do
 
     repeat
         wait()
-        if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame == finishCFrame then
+        local distanceToFinish = (finishCFrame.Position - playerCFrame.Position).Magnitude
+        local nearestDistance = 10 -- Assume a maximum distance
+        if distanceToFinish < nearestDistance then
+            nearestDistance = distanceToFinish
             local spawnCFrame = game:GetService("Workspace").Spawn.Spawn.CFrame
             local Tw2 = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0), {
                 CFrame = spawnCFrame
             }):Play()
-            repeat wait() until game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame == spawnCFrame
+            repeat wait() until (finishCFrame.Position - playerCFrame.Position).Magnitude < nearestDistance
         end
     until not _G.veryrisk
 end
